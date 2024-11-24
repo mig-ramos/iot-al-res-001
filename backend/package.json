@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/server.ts"
   },
   "keywords": [],
   "author": "Miguel Arcanjo Ramos",
   "license": "ISC",
   "description": "Sistema de proteção e monitoramento residencial",
   "devDependencies": {
+    "@types/node": "^22.9.3",
     "typescript": "^5.7.2"
   },
   "dependencies": {
