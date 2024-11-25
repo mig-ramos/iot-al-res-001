@@ -1,6 +1,7 @@
 import { FastifyInstance, FastifyPluginOptions, FastifyRequest, FastifyReply } from "fastify";
 import { CreateDeviceController } from "./controllers/CreateDeviceController";
-import { ListDeviceController } from "./controllers/ListDeviceController";
+import { ListDevicesController } from "./controllers/ListDeviceController";
+import { DeleteDeviceController } from "./controllers/DeleteDeviceController";
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
 
@@ -13,7 +14,11 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
     })
 
     fastify.get("/devices", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new ListDeviceController().handle(request, reply)
+        return new ListDevicesController().handle(request, reply)
+    })
+
+    fastify.delete("/device/:id", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new DeleteDeviceController().handle(request, reply)
     })
 
 }

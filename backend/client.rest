@@ -21,3 +21,6 @@ Content-Type: application/json
 
 ###List Devices 
 GET {{baseUrl}}/devices
+
+###Insert Device
+DELETE {{baseUrl}}/device/?id=6744601b89a50f5a020b09e5
