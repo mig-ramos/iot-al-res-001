@@ -1,5 +1,6 @@
 import { FastifyInstance, FastifyPluginOptions, FastifyRequest, FastifyReply } from "fastify";
 import { CreateDeviceController } from "./controllers/CreateDeviceController";
+import { ListDeviceController } from "./controllers/ListDeviceController";
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
 
@@ -9,6 +10,10 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
 
     fastify.post("/device", async (request: FastifyRequest, reply: FastifyReply) => {
         return new CreateDeviceController().handle(request, reply)
+    })
+
+    fastify.get("/devices", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new ListDeviceController().handle(request, reply)
     })
 
 }

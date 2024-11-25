@@ -11,8 +11,13 @@ POST {{baseUrl}}/device
 Content-Type: application/json
 
   {
-    "front_side": true,
-    "back_side": false,
-    "right_side": true,
-    "left_side": true
+    "name": "casa28",
+    "sensorFS": "on",
+    "sensorBS": "on",
+    "sensorRS": "on",
+    "sensorLS": "on",
+    "status": true
   }
+
+###List Devices 
+GET {{baseUrl}}/devices
