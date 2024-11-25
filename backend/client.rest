@@ -1,0 +1,18 @@
+@baseUrl = http://localhost:3333
+//@token =dfdfsfdds
+
+## Status Sensors
+
+###Rota Teste 
+GET {{baseUrl}}/teste
+
+###Insert Device
+POST {{baseUrl}}/device
+Content-Type: application/json
+
+  {
+    "front_side": true,
+    "back_side": false,
+    "right_side": true,
+    "left_side": true
+  }
