@@ -1,10 +1,10 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { ListDeviceService } from "../services/ListDeviceService";
+import { ListDevicesService } from "../services/ListDevicesService";
 
-class ListDeviceController{
+class ListDevicesController{
 
     async handle(request: FastifyRequest, reply: FastifyReply){
-        const listDeviceService = new ListDeviceService()
+        const listDeviceService = new ListDevicesService()
 
         const devices = await listDeviceService.execute();
 
@@ -12,4 +12,4 @@ class ListDeviceController{
     }
 }
 
-export { ListDeviceController }
+export { ListDevicesController }

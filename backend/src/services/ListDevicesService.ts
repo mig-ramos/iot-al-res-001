@@ -1,6 +1,6 @@
 import prismaClient from "../prisma";
 
-class ListDeviceService{
+class ListDevicesService{
 
     async execute(){
 
@@ -10,4 +10,4 @@ class ListDeviceService{
     }
 }
 
-export { ListDeviceService }
+export { ListDevicesService }
