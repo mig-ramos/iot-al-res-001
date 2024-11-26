@@ -11,16 +11,28 @@ POST {{baseUrl}}/device
 Content-Type: application/json
 
   {
-    "name": "casa28",
+    "name": "casa30",
     "sensorFS": "on",
     "sensorBS": "on",
     "sensorRS": "on",
-    "sensorLS": "on",
-    "status": true
+    "sensorLS": "on"
   }
 
 ###List Devices 
 GET {{baseUrl}}/devices
 
-###Insert Device
+###Delete Device
 DELETE {{baseUrl}}/device/?id=6744601b89a50f5a020b09e5
+
+###Update Device
+PUT {{baseUrl}}/device/up/?id=674521b9f98dd0c0fc1d00fd
+Content-Type: application/json
+
+  {
+    "name": "casa28",
+    "sensorFS": "on",
+    "sensorBS": "on",
+    "sensorRS": "on",
+    "sensorLS": "on",
+    "active": false
+  }

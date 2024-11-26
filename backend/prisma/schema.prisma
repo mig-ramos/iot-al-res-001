@@ -29,7 +29,7 @@ model Device {
   sensorBS String
   sensorRS String
   sensorLS String
-  status Boolean
+  active Boolean? @default(true)
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
 

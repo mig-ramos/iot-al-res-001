@@ -5,7 +5,6 @@ class DeleteDeviceController {
 
     async handle(request: FastifyRequest, reply: FastifyReply) {
         const { id } = request.query as { id: string }
-        console.log(id) 
 
         const deviceService = new DeleteDeviceService();
 

@@ -6,12 +6,12 @@ interface CreateDeviceProps{
     sensorBS: string; 
     sensorRS: string; 
     sensorLS: string; 
-    status: boolean;
+    active?: boolean;
 }
 
 class CreateDeviceService{
 
-    async execute({name, sensorFS, sensorRS, sensorLS, sensorBS}: CreateDeviceProps){
+    async execute({name, sensorFS, sensorRS, sensorLS, sensorBS, active}: CreateDeviceProps){
         if(!name || !sensorFS || !sensorRS || !sensorLS || !sensorBS){
             throw new Error("Preencha todos os campos.");
         }
@@ -23,7 +23,7 @@ class CreateDeviceService{
                 sensorBS, 
                 sensorRS, 
                 sensorLS, 
-                status: true
+                active,
             }
         })
 
