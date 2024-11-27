@@ -1,25 +1,32 @@
+import Content from './components/content';
 import { BrowserRouter, Routes, Route } from 'react-router'
-import { Navbar } from "./components/Navbar";
+import { Header } from './components/Header.';
 import Home from './pages/Home'
 import Measures from './pages/Measures'
 import Admin from './pages/Admin'
 import About from './pages/About'
 import NotFound from './pages/NotFound';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
 
   return (
-    <div className="w-full min-h-screen bg-zinc-100 px-4">
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/measures" element={<Measures />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/about" element={<About />} />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+    <div className='bg-zinc-100 min-h-screen'>
+      <Content>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/measures" element={<Measures />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </Content>
     </div>
   )
 }
