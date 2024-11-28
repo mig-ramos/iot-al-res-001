@@ -7,7 +7,7 @@ export function Navbar() {
       <Link to={"/"} className="flex">
         <LogoTipo />
       </Link>
-      <nav className="flex flex-col md:flex-row items-center gap-5 mx-auto text-2xl">
+      <nav className="flex flex-col leading-6 md:flex-row items-center gap-5 mx-auto text-2xl">
         <NavLink to="/" className={({ isActive }) => (isActive ? "text-rose-600" : "text-zinc-600")}>Home</NavLink>
         <NavLink to="/checklist" className={({ isActive }) => (isActive ? "text-rose-600" : "text-zinc-600")}>Check-list</NavLink>
         <NavLink to="/admin" className={({ isActive }) => (isActive ? "text-rose-600" : "text-zinc-600")}>Admin</NavLink>
