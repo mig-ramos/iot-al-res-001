@@ -8,6 +8,7 @@ import About from './pages/About'
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import { Footer } from './components/footer';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </Content>
     </div>
