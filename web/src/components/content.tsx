@@ -9,7 +9,7 @@ interface ContentProps {
              flex flex-col
           `}
       >
-        <div className={`w-11/12 md:w-8/12 mx-auto`}>{props.children}</div>
+        <div className={`w-11/12 mx-auto`}>{props.children}</div>
       </div>
     );
   }

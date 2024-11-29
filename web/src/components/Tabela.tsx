@@ -33,8 +33,8 @@ const Tabela = () => {
               <td className="px-4 py-2 border-b text-gray-800">{(item.IRLD ? "Normal":"Interceptado")}</td>
               <td className="px-4 py-2 border-b text-gray-800">{(item.IRLE ? "Normal":"Interceptado")}</td>
               <td className="px-4 py-2 border-b text-gray-800">{(item.IRLT ? "Normal":"Interceptado")}</td>
-              <td className="px-4 py-2 border-b text-gray-800"><button className="border-2 border-blue-500 px-4 py-1 hover:bg-blue-200 rounded-xl">Editar</button></td>
-              <td className="px-4 py-2 border-b text-gray-800"><button className="border-2 border-red-500 px-4 py-1 hover:bg-red-200 rounded-xl">Excluir</button></td>
+              <td className="px-4 py-2 border-b text-gray-800"><button className="border-2 border-blue-500 px-3 py-1 hover:bg-blue-200 rounded-xl">Editar</button></td>
+              <td className="px-4 py-2 border-b text-gray-800"><button className="border-2 border-red-500 px-3 py-1 hover:bg-red-200 rounded-xl">Excluir</button></td>
             </tr>
           ))}
         </tbody>

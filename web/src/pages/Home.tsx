@@ -8,7 +8,7 @@ export default function Home() {
                     <p>
                         Sistema de alarme, monitoramento e controle residencial. A característica principal deste sistema
                         está na utilização de sensores IR - infra-vermelhos de longo alcanse (60m), instalados no perímetro da propriedade.
-                        Somente com a instalação destes sensores de infra-vermelho já inibe a intrmissão dos meliantes. E se, mesmo assim
+                        Somente com a instalação destes sensores de infra-vermelho já inibe a intromissão dos meliantes. E se, mesmo assim
                         for tentada a ação de ultrapassar as barreiras de infra-vermelho, um sinal de anormalidade será enviado a central
                         de controle e alarme. Este sinal identificará qual lado da propriedade está sendo violado. Mesmo que o
                         meliante se evada do local, ficará sinalizando na central de alarme até que seja reconhecida a anormalidade.

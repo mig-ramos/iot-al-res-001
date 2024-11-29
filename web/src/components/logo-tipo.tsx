@@ -1,8 +1,8 @@
-export function LogoTipo(){
-    return(
-        <div className="w-44 flex flex-col">
-            <p className="flex justify-end text-nowrap text-lg">Internet Off Things</p>
-            <h1 className="flex justify-end text-5xl">SIDEBIT</h1>
+export function LogoTipo() {
+    return (
+        <div className="w-auto flex flex-col shadow-xl opacity-50 border px-1">
+            <p className="flex justify-end text-nowrap text-xl font-mono tracking-tighter text-purple-800">I O T</p>
+            <p className="flex justify-end  text-3xl tracking-[.025em]"><span className="text-purple-800 font-bold">SIDE</span>BIT</p>
         </div>
     )
 }
