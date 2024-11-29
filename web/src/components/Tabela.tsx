@@ -9,7 +9,7 @@ const Tabela = () => {
   ];
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto py-6">
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">Lista de Dispositivos</h2>
       <table className="min-w-full table-auto border-collapse border border-gray-200">
         <thead className="bg-gray-100">
