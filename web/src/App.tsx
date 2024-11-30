@@ -6,7 +6,7 @@ import Admin from './pages/Admin'
 import About from './pages/About'
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
-import Register from './pages/Register';
+import SignUp from './pages/SignUp';
 import { Footer } from './components/footer';
 import CheckList from './pages/CheckList';
 
@@ -23,7 +23,7 @@ function App() {
             <Route path="/admin" element={<Admin />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/signup" element={<SignUp />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
           <Footer />
