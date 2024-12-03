@@ -22,16 +22,44 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Device {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  name String
-  sensorFS String
-  sensorBS String
-  sensorRS String
-  sensorLS String
-  active Boolean? @default(true)
+model Admin {
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  email      String
+  password   String
+  active     Boolean?  @default(true)
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
 
-  @@map("devices")
+  @@map("admins")
+}
+
+model User {
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  email      String
+  password   String
+  active     Boolean?  @default(true)
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+  device     Equipament[]
+
+  @@map("users")
+}
+
+model Equipament {
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  sensorFS   String
+  sensorBS   String
+  sensorRS   String
+  sensorLS   String
+  active     Boolean?  @default(true)
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+
+  user   User @relation(fields: [userId], references: [id])
+  userId String   @db.ObjectId
+
+  @@map("equipaments")
 }

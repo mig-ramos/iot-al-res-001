@@ -26,7 +26,7 @@ export default function SignUp() {
                         type="password"
                         required
                         name="password"
-                        placeholder="*************"
+                        placeholder="Digite sua senha..."
                     />
                     <button type="submit" className="bg-blue-300 h-10 w-full text-lg cursor-pointer rounded-xl hover:scale-105 delay-500">
                         Cadastrar

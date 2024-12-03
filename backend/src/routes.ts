@@ -1,8 +1,8 @@
 import { FastifyInstance, FastifyPluginOptions, FastifyRequest, FastifyReply } from "fastify";
-import { CreateDeviceController } from "./controllers/CreateDeviceController";
-import { ListDevicesController } from "./controllers/ListDeviceController";
-import { DeleteDeviceController } from "./controllers/DeleteDeviceController";
-import { UpdateDeviceController } from "./controllers/UpdateDeviceController";
+import { CreateEquipamentController } from "./controllers/equipament/CreateEquipamentController";
+import { ListEquipamentController } from "./controllers/equipament/ListEquipamentController";
+import { DeleteEquipamentController } from "./controllers/equipament/DeleteEquipamentController";
+import { UpdateEquipamentController } from "./controllers/equipament/UpdateEquipamentController";
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
 
@@ -10,20 +10,20 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
         return { ok: true }
     })
 
-    fastify.post("/device", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new CreateDeviceController().handle(request, reply)
+    fastify.post("/equipament", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new CreateEquipamentController().handle(request, reply)
     })
 
-    fastify.get("/devices", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new ListDevicesController().handle(request, reply)
+    fastify.get("/equipament", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new ListEquipamentController().handle(request, reply)
     })
 
-    fastify.delete("/device/del/:id", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new DeleteDeviceController().handle(request, reply)
+    fastify.delete("/equipament/del/:id", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new DeleteEquipamentController().handle(request, reply)
     })
 
-    fastify.put("/device/up/:id", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new UpdateDeviceController().handle(request, reply)
+    fastify.put("/equipament/up/:id", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new UpdateEquipamentController().handle(request, reply)
     })
 
 }
